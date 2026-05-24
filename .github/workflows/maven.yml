@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latesttest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -32,6 +32,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           mvn clean verify sonar:sonar \
-            -Dsonar.projectKey=rafifpajwakurniawan_basic-java-sonarcloud \
+            -Dsonar.projectKey=rafifpajwakurniawan_CICD-CONTINUOUS \
             -Dsonar.organization=rafifpajwakurniawan \
             -Dsonar.host.url=https://sonarcloud.io
